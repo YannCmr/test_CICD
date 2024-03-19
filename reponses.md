@@ -27,3 +27,16 @@ Une étape est au minimum définie par les éléments suivants :
 **La première étape contient le mot-clé 'with', a quoi sert-il ?**
 
 Le mot-clé `with` est utilisé pour passer des paramètres supplémentaires à l'action ou à l'étape en cours d'exécution. Dans le contexte de l'étape de configuration de Python, `with` sert à spécifier la version de Python à installer et à configurer (dans ce cas, Python 3.10). Cela permet de personnaliser le comportement des actions utilisées, en fournissant des configurations spécifiques nécessaires à l'exécution de l'étape.
+
+
+# Exercice 2 
+
+## a)
+**Sur l’onglet Summary d’une analyse de code, SonarCloud fournit 4 indicateurs. Quels sont-ils et quelles sont leurs utilités ?**  
+- Bugs : problème dans le code qui peut poser une erreur ou un comportement inattendu. Sert à cibler les corrections à faire en priorité pour la stabilité.
+- Vulnérabilité : montre le nombres de points faibles détectés. Sert à protéger l'application des attaques.
+- Code smells : cible le code rendant le code plus difficile à comprendre, à mainteneir, ou à étendre. Sert à améliorer la maintenabilité du code.
+- Couverture : fournit un pourcentage indiquant quel % du code source est couvert par les tests automatisés. Sert à donner un indicateur de confiance dans la qualité et la fiabilité de l'application.
+
+**À quoi sert l’indicateur Quality Gate ?**  
+Le Quality Gate est un concept clé dans SonarCloud qui sert à évaluer automatiquement si un projet de code respecte un certain ensemble de critères de qualité avant qu'il ne soit considéré comme acceptable pour une étape suivante (par exemple, avant d'être déployé en production ou avant de fusionner une pull request). Un Quality Gate peut être personnalisé, mais il inclut typiquement des critères liés aux bugs, aux vulnérabilités, aux odeurs de code, et à la couverture des tests. Si un projet passe le Quality Gate, cela indique qu'il répond aux normes de qualité minimales définies. Si le projet échoue, il doit être amélioré avant de progresser. L'indicateur Quality Gate permet donc d'assurer une certaine qualité du code et de minimiser les risques avant les déploiements ou les intégrations de changements.
